@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr" class="html-nostalgie">
+<head>
+    <meta charset="UTF-8">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="img/coeurIcone.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
+    <title>Nostalgie</title>
+    <style>
+    *,
+  *::after,
+  *::before{
+  
+  box-sizing: border-box
+  
+  }
+  
+  input[type="radio"]{position:absolute;left:-100vw}
+  
+  label{cursor:pointer}
+  
+  
+  .slider {
+  
+  display: grid;
+  overflow: hidden;
+  max-width: 720px;
+  border-radius: 0.75rem;
+  margin:5rem auto;
+      
+      }
+    
+      
+  .slider> * {
+      
+  grid-area: 1/1;
+  
+  }	
+  
+  
+  
+  
+  .slider  ul { 
+  
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+      
+  }
+  
+      
+  .slider  ul li{
+  z-index:-1;
+  flex: 0 0 100%;
+  transition: transform .4s;
+  will-change: transform
+  }
+      
+  .slider  ul  li img {
+      
+  aspect-ratio:3/2;	
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  height:auto;
+  user-select: none;
+      
+  }
+  
+      
+   
+  #slide_img2:checked ~  ul > li{transform: translate3d(-100%,0,0)}  
+  #slide_img3:checked ~  ul > li{transform: translate3d(-200%,0,0)}
+  #slide_img4:checked ~  ul > li {transform: translate3d(-300%,0,0)}
+  
+   
+      
+  /******************fleches**************************/
+      
+      
+  .precedent{place-self: center left;	}
+  .suivant{place-self: center right;}
+      
+  
+  
+  .slider > .precedent > label,
+  .slider > .suivant > label{
+  
+  display: none;
+  background-color:hsl(0,0%,15%);
+  justify-content: center;
+  align-content: center
+      
+  }   
+          
+  .slider > .precedent > label:after{content:'←'}
+  .slider > .suivant > label:after{content:'→'}
+      
+  .slider > .precedent > label:after,
+  .slider > .suivant > label:after {
+      
+  display: flex;
+  align-items: center;
+  font-size:2rem;
+  font-size:clamp(2rem, 2vw, 4rem);
+  color:hsl(0, 0%, 100%);
+  
+      
+      }   
+      
+  
+  #slide_img1:checked ~ .precedent > label.img4,
+  #slide_img1:checked ~ .suivant > label.img2,
+  #slide_img2:checked ~ .precedent > label.img1,
+  #slide_img2:checked ~ .suivant > label.img3,
+  #slide_img3:checked ~ .precedent > label.img2,
+  #slide_img3:checked ~ .suivant > label.img4,
+  #slide_img4:checked ~ .precedent > label.img3,
+  #slide_img4:checked ~ .suivant > label.img1{
+      
+  display:flex;
+  width:2rem;
+  height:2rem;
+  width:clamp(3rem, 8vw, 4rem);
+  height:clamp(3rem, 8vw, 4rem);
+      
+      }
+  
+  
+  
+  /***************************navigation puces bas********************************/
+  .puces {
+  
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  place-self: end center;
+      
+      }
+      
+  .puces label{
+      
+  background-color: white;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  width:clamp(1rem, 2vw, 1.5rem);
+  height:clamp(1rem, 2vw, 1.5rem);	
+      }
+  
+  /********************simulation lien actif sur les puces******************************/
+  
+      
+  #slide_img1:checked ~ .puces > label.img1> .actif_puces,
+  #slide_img2:checked ~ .puces > label.img2 > .actif_puces,
+  #slide_img3:checked ~ .puces > label.img3 > .actif_puces,
+  #slide_img4:checked ~ .puces > label.img4 > .actif_puces{
+      
+  border-radius: inherit;	
+  display: flex;
+  height: inherit;
+  width: inherit;
+  background-color: black;
+      
+      }
+  
+  /********************************navigation puces bas****************************/
+  
+    </style>
+</head>
+<body class="body-nostalgie">
+    <a href="allEmotions.html" class="boutonRetour" title="C'est le bouton de retour si jamais hein">
+        <svg style="color: black;" width="45" height="45" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 14 4 9l5-5"></path>
+            <path d="M20 20v-7a4 4 0 0 0-4-4H4"></path>
+        </svg>
+      </a>
+
+      <h1 class="titre-nosta">La nostalgie</h1>
+
+      <div class="zone-texte-nostalgie">
+        <article class="article-nosta">
+            <p class="texte-nosta">
+            Tu es nostalgique de nos moments passés ensemble ? <br> 
+            Je comprends tout à fait.. <br> 
+            En plus d'être un sentiment difficile à contrôler, il est aussi très difficile à rassurer. <br>
+            Je sais très bien que des mots ne seront pas suffisant, rien ne le sera tant que nos moments ensemble ne 
+            feront pas partie du quotidien. <br>
+            </p>
+            <img class="photoNostalgie" src="img/photoMignonneHorizontal.jpg" alt="photo mimi" title="Adorable cette photo">
+        </article>
+
+        <article class="article-nosta">
+            <img class="photoNostalgie" src="img/t-ki-toi.jpg" alt="photo mimi" title="GNÉ">
+            <p class="texte-nosta">
+            Ce que je te propose en échange c'est d'imaginer l'avenir avec moi. <br> 
+            Jusqu'à maintenant j'ai beaucoup réutilisé d'ancienne photo, ici je veux prévoir d'en faire de nouvelles.
+            Qu'on trouve ensemble des situations spécifiques ou des endroits où l'on doit prendre ces photos. <br>
+            Cela peut très bien être les mêmes photos que l'on a déjà faite mais cette fois, en version remasterisée ou alors en faire des
+            complètement inédites <br>
+            </p>
+        </article>
+
+        <article class="article-nosta">
+            <p class="texte-nosta">
+                Comme ça, dans un mois, un an voir plus et qu'on reviendra sur ce site, on verra ce qu'on avait comme envie.
+                J'actualiserai le site avec nos photos réussie dès que l'on les aura faites.
+                On pourra réellement voir les progrès que l'on a fait, les nouveaux moments passé ensemble et déjà préparer les suivants ❤️ <br>
+                On doit toujours rester orienté vers l'avenir.
+            </p>
+            <img class="photoNostalgie" src="img/tiensLaMain2.jpg" alt="photo mimi" title="Adorable cette photo">
+        </article>
+
+      </div>
+
+      <h2 class="titre-slider">Je veux au moins refaire celles ci &#x2665</h2>
+
+    <div class=slider><!-- Notre conteneur global -->
+
+        <input name="slider" id=slide_img1 type="radio" checked><!-- même nom pour tous les input / identifiant unique -->
+        <input name="slider" id=slide_img2 type="radio">
+        <input name="slider" id=slide_img3 type="radio">
+        <input name="slider" id=slide_img4 type="radio"> 
+        
+        <ul>
+            <li class=img1>
+            <img src=img/louche2.jpg alt height="" width="">
+            </li>
+            <li class=img2>
+            <img src=img/t-ki-toi.jpg alt height="" width="">
+            </li>
+            <li class=img3>
+            <img src=img/doua.jpg alt height="" width="">
+            </li>
+            <li class=img4>
+            <img src=img/tiensTT.jpg alt height="" width="">
+            </li>
+        </ul>
+        
+        <div class=precedent>
+            <label class=img1 for=slide_img1></label>
+            <label class=img2 for=slide_img2></label>
+            <label class=img3 for=slide_img3></label>
+            <label class=img4 for=slide_img4></label>
+        </div>
+        
+        <div class=suivant>
+            <label class=img1 for=slide_img1></label>
+            <label class=img2 for=slide_img2></label>
+            <label class=img3 for=slide_img3></label>
+            <label class=img4 for=slide_img4></label>
+        </div>
+        
+        <div class=puces>
+            <label class="img1" for=slide_img1>
+                <span class=actif_puces></span>
+            </label>
+            <label class="img2" for=slide_img2>
+                <span class=actif_puces></span>
+            </label>
+            <label class="img3" for=slide_img3>
+                <span class=actif_puces></span>
+            </label>	
+            <label class="img4" for=slide_img4>
+                <span class=actif_puces></span>
+            </label>
+        </div>
+    
+    </div><!-- fin conteneur global -->	
+    
+    
+
+</body>
+</html>

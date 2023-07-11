@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <script src="lib/moment/moment.js"></script>
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="img/coeurIcone.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
+    <title>Toutes tes émotions</title>
+</head>
+<body>
+    <!-- Bouton retour en arrière -->
+    <a href="accueil.html" class="boutonRetour" title="C'est le bouton de retour si jamais hein">
+        <svg style="color: black;" width="45" height="45" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 14 4 9l5-5"></path>
+            <path d="M20 20v-7a4 4 0 0 0-4-4H4"></path>
+        </svg>
+    </a>
+
+    <div id="counter"></div>
+    <h1 class="titreAllEmotions">Comment te sens tu ? <br></h1>
+
+   <section class="conteneurAllFlip">
+
+    <a href="triste.html">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front" style="background: linear-gradient(120deg, #91bbd1 60%, rgb(255, 231, 222) 88%,
+                rgb(255, 211, 195) 40%, #3286aa 48%);
+                color: #3286aa;">
+                    <p class="title">TRISTE</p>
+                    <p style="font-size: 20px;">&#128546;</p>
+                </div>
+                <div class="flip-card-back" style="background: linear-gradient(120deg, #91bbd1 30%, #3286aa 88%,
+                bisque 40%, #91bbd1 78%);
+            color: white;
+            transform: rotateY(180deg);">
+                    <p class="title">Viens faire calins</p>
+                    <p>&#9829;</p>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <a href="manque.html">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front" style="background: linear-gradient(120deg, #DBC7C9 60%, rgb(255, 231, 222) 88%,
+                rgb(255, 211, 195) 40%, #C0587E 48%);
+                color: #C0587E;">
+                    <p class="title">MANQUE D'AMOUR</p>
+                    <p style="font-size: 20px;">&#9829;</p>
+                </div>
+                <div class="flip-card-back" style="background: linear-gradient(120deg, #DBC7C9 30%, #C0587E 88%,
+                bisque 40%, #DBC7C9 78%);
+            color: white;
+            transform: rotateY(180deg);">
+                    <p class="title">J'ai ce qu'il te faut</p>
+                    <p>&#9829;</p>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <a href="heureuse.html">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front" style="background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+                rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+                color: coral;">
+                    <p class="title">HEUREUSE</p>
+                    <p style="font-size: 20px;">&#128522;</p>
+                </div>
+                <div class="flip-card-back" style="background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
+                bisque 40%, rgb(255, 185, 160) 78%);
+            color: white;
+            transform: rotateY(180deg);">
+                    <p class="title">Ooooh c'est vrai ??</p>
+                    <p>&#9829;</p>
+                </div>
+            </div>
+        </div>
+    </a>
+
+   <!--<a href="pasContente.html">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front" style="background: linear-gradient(120deg, #FD292F 60%, rgb(255, 231, 222) 88%,
+                rgb(255, 211, 195) 40%, #BC0000 48%);
+                color: #680003;">
+                    <p class="title">PAS CONTENTE</p>
+                    <p style="font-size: 20px;">&#128545;</p>
+                </div>
+                <div class="flip-card-back" style="background: linear-gradient(120deg, #FD292F 30%, coral 88%,
+                bisque 40%, #FD292F 78%);
+            color: white;
+            transform: rotateY(180deg);">
+                    <p class="title">Faire du boudin c'est vilain</p>
+                    <p>&#9829;</p>
+                </div>
+            </div>
+        </div>
+    </a>--> 
+
+    <a href="nostalgique.html">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front" style="background: linear-gradient(120deg, #995E7C 60%, rgb(255, 231, 222) 88%,
+                rgb(255, 211, 195) 40%, #D39CBD 48%);
+                color: #D39CBD;">
+                    <p class="title">NOSTALGIQUE</p>
+                    <p style="font-size: 20px;">&#128542;</p>
+                </div>
+                <div class="flip-card-back" style="background: linear-gradient(120deg, #995E7C 30%, #D39CBD 88%,
+                bisque 40%, #995E7C 78%);
+            color: white;
+            transform: rotateY(180deg);">
+                    <p class="title">Regarde l'avenir avec moi</p>
+                    <p>&#9829;</p>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <a href="nulle.html">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front" style="background: linear-gradient(120deg, #8B9D77 60%, rgb(255, 231, 222) 88%,
+                rgb(255, 211, 195) 40%, #37745B 48%);
+                color: #37745B;">
+                    <p class="title">NULLE</p>
+                    <p style="font-size: 20px;">&#128534;</p>
+                </div>
+                <div class="flip-card-back" style="background: linear-gradient(120deg, #8B9D77 30%, #37745B 88%,
+                bisque 40%, #8B9D77 78%);
+            color: white;
+            transform: rotateY(180deg);">
+                    <p class="title">C FO À 100%</p>
+                    <p>&#9829;</p>
+                </div>
+            </div>
+        </div>
+    </a>
+    
+   </section>
+</body>
+</html>
+
+
+
+<!--FAIRE 25MIN PUIS PAUSE 5 MINUTES -->

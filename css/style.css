@@ -1,0 +1,541 @@
+*{
+  font-family: 'Dosis', sans-serif;
+  cursor: url('../img/sym752.cur'), auto;
+}
+body{
+  background-color: #EEE6D8;
+}
+
+.boutonRetour{
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  padding: 10px; 
+  border-radius: 25%; 
+  border: black solid;
+}
+
+.boutonRetour:hover{ 
+  background-color: #b09292;
+}
+/*------------- DEBUT FORMULAIRE ---------------*/
+
+
+/*------------- HEART ---------------*/
+.form-container {
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    height: 85vh; /* Ajuster la hauteur du conteneur */
+  }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #F4CFDF; /*rgb(245, 188, 188)*/
+    padding: 2.5em;
+    border-radius: 25px;
+    transition: .4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 2px;
+    height: 50vh;
+    width: 30vh;
+  }
+  
+  .form:hover {
+    transform: translateX(-0.5em) translateY(-0.5em);
+    border: 1px solid #171717;
+    box-shadow: 10px 10px 0px #666666;
+  }
+  
+  .heading {
+    color: black;
+    padding-bottom: 2em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0%;
+    font-size: 25px;
+  }
+  
+  .input {
+    border-radius: 5px;
+    border: 1px solid whitesmoke;
+    background-color: whitesmoke;
+    outline: none;
+    padding: 0.7em;
+    transition: .4s ease-in-out;
+  }
+  
+  .input:hover {
+    box-shadow: 6px 6px 0px #969696,
+               -3px -3px 10px #ffffff;
+  }
+  
+  .input:focus {
+    background: #ffffff;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+  }
+  
+  .form .btn {
+    margin-top: 2em;
+    align-self: center;
+    padding: 0.7em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 10px;
+    border: none;
+    color: black;
+    transition: .4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+  }
+
+  .form .btn:hover {
+    box-shadow: 6px 6px 0px #969696,
+               -3px -3px 10px #ffffff;
+    transform: translateX(-0.5em) translateY(-0.5em);
+  }
+  
+  .form .btn:active {
+    transition: .2s;
+    transform: translateX(0em) translateY(0em);
+    box-shadow: none;
+  }
+
+.titreFormulaire{
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 0%;
+}
+
+/*------------- FIN FORMULAIRE ---------------*/
+
+/*------------- DEBUT PAGE ACCUEIL ---------------*/
+.tailleAccueil{
+  height: 100%;
+}
+
+.titreAccueil{
+  text-align: center;
+  font-size: 5vh;
+  padding: 0%;
+  margin: 0%;
+}
+
+.conteneurImageA2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  margin-top: 1%;
+}
+
+/*Forme ronde à l'image*/
+.photoAccueil{
+  border: #171717 solid 5px;
+  border-radius: 50%;
+  width: 40vh;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.texteAccueil{
+  text-align: center;
+  font-size: 3vh;
+  line-height: 35px;
+  margin-bottom: 0%;
+}
+
+/*choisir position du bouton*/
+.containerBouton{
+  display: flex;
+  height: 10%;
+  justify-content: center;
+  align-items: center;
+}
+/*Bouton pivotant*/
+.scene {
+  display: flex;
+    width: 10em;
+    justify-content: center;
+    align-items: center;
+   }
+   
+   .cube {
+    color: #ccc;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.85s cubic-bezier(.17,.67,.14,.93);
+    transform-style: preserve-3d;
+    transform-origin: 100% 50%;
+    width: 10em;
+    height: 4em;
+   }
+   
+   .cube:hover {
+    transform: rotateX(-90deg);
+   }
+   
+   .side {
+    box-sizing: border-box;
+    position: absolute;
+    display: inline-block;
+    height: 4em;
+    width: 10em;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 1.5em;
+    font-weight: bold;
+   }
+   
+   .top {
+    background: wheat;
+    color: #222229;
+    transform: rotateX(90deg) translate3d(0, 0, 2em);
+    box-shadow: inset 0 0 0 5px #fff;
+   }
+   
+   .front {
+    background: #222229;
+    color: #fff;
+    box-shadow: inset 0 0 0 5px #fff;
+    transform: translate3d(0, 0, 2em);
+   }
+   /*fin bouton*/
+
+   /*page toutes les émotions*/
+
+.titreAllEmotions{
+  text-align: center;
+  padding-top: 15vh;
+  padding-bottom: 5vh;
+  width: 30%;
+  margin-left: 36%;
+}
+
+/*Affiche texte lors survolage*/
+
+.titreAllEmotions:hover::after {
+  content: "BIEN J'ESPÈRE GROS BÉBOU";
+}
+
+   /*compteur de jour*/
+
+   #counter{
+    z-index: 100;
+    position: absolute;
+    left: 25vh;
+    width: 175vh;
+    text-align: center;
+    font-size: 36px; 
+    color: #333;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     }
+
+/*Allignement de toutes les flip dans la section*/
+
+.conteneurAllFlip{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
+  width: 75%;
+  height: 100%;
+  padding-left: 12.5%;
+  gap: 15%;
+}
+
+/*flip card all emotions*/
+
+.flip-card {
+  background-color: transparent;
+  width: 190px;
+  height: 254px;
+  padding: 5%;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /*border: 1px solid coral;*/
+  border-radius: 1rem;
+}
+
+/*.flip-card-front {
+  background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+     rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+     /*color: coral;
+}*/
+
+/*.flip-card-back {
+  background: linear-gradient(120deg, rgb(255, 174, 145) 30%, coral 88%,
+     bisque 40%, rgb(255, 185, 160) 78%);
+  color: white;
+  transform: rotateY(180deg);
+} */
+
+/*------------- DEBUT PAGE TRISTE ---------------*/
+
+.bodyTriste {
+  margin: 0%;
+  background-color: #acc4ce;
+}
+
+.titreTriste{
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.sectionTriste{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.sectionTriste h2{
+  text-align: center;
+}
+
+.articleTriste1{
+  height: 70vh;
+  width: 100%;
+}
+
+.articleTriste2{
+  border: solid 1px black;
+  background-color: #EEE6D8;
+  height: 70vh;
+  max-width: 100%;
+}
+
+.articleTriste3{
+  border: solid 1px black;
+  height: 70vh;
+  max-width: 100%;
+}
+
+.containerTriste{
+  display: flex;
+  align-items: flex-start;
+}
+
+.paragrapheTriste{
+  flex: 1;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.photoTriste{
+  width: 50%;
+  text-align: center;
+  height: 60vh;
+}
+
+.photoTriste img{
+  border-radius: 50%;
+  width: 30vh;
+  height: 30vh;
+  object-fit: cover;
+}
+
+.bulle1{
+  margin-top: 10vh;
+}
+
+.bulle2{
+  margin-bottom: 20vh;
+}
+
+/*------------- FIN PAGE TRISTE ---------------*/
+
+/*------------- DEBUT PAGE MANQUE ---------------*/
+
+/*voir autre feuille de style */
+/*------------- FIN PAGE MANQUE ---------------*/
+
+/*------------- DEBUT PAGE HEUREUSE ---------------*/
+
+.diapoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#slideshow {
+  width: 80%; /* Ajustez la largeur selon vos besoins */
+}
+
+.slide {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%; /* Ratio d'aspect 16:9 pour les vidéos */
+}
+
+.slide img,
+.slide video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vh;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 5%;
+}
+
+.description {
+  font-size: 1.4em;
+  margin-top: 50px;
+  text-align: center;
+}
+/*------------- FIN PAGE HEUREUSE ---------------*/
+/*------------- DEBUT PAGE NULLE ---------------*/
+.border-box-size{
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.quiz-container{
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+  width: 500px;
+  max-width: 95vw;
+  overflow: hidden;
+}
+
+.quiz-header{
+  padding: 1rem;
+}
+
+.titre-h2-quiz{
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li{
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+.submit-quiz{
+  background-color: #b8c6db;
+  color: #000000;
+  border: none;
+  display: block;
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 1.1rem;
+}
+
+.submit-quiz:hover {
+  background-color: #a4badb;
+}
+
+.submit-quiz:focus{
+  outline: none;
+  background-color: #5e3370;
+}
+/*------------- FIN PAGE NULLE ---------------*/
+
+/*------------- DEBUT PAGE NOSTALGIQUE ---------------*/
+
+.html-nostalgie, .body-nostalgie {
+  width: 100%;
+  height: 100%;
+}
+
+.titre-nosta{
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
+  font-size: 3em;
+}
+
+.zone-texte-nostalgie{
+  background-color: #ffbbcc;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: auto;
+  margin-left: 12.5%;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+  font-size: 1.5em;
+}
+
+.article-nosta{
+  display: flex;
+  width: 100%;
+}
+
+.texte-nosta{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.photoNostalgie{
+  display: flex;
+  border-radius: 50%;
+  width: 40vh;
+  height: 40vh;
+  object-fit: cover;
+  padding: 2em;
+  margin: 0%;
+}
+
+.titre-slider{
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 0%;
+  font-size: 2em;
+}
